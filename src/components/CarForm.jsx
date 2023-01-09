@@ -1,10 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 import { changeName, changeCost, addCar } from "../store";
 
+import "bulma/css/bulma.css";
+
 function CarForm() {
   //Selector functions to get access to the state of carName and carCost
   const { name, cost } = useSelector((state) => state.form);
-  const { carsList } = useSelector((state) => state.cars);
 
   //Setting the dispatch func
   const dispatch = useDispatch();
@@ -26,7 +27,7 @@ function CarForm() {
 
   return (
     <div className="car-form panel">
-      <h4 className="subtitle is-3">Burron</h4>
+      <h4 className="subtitle is-3">Car tracker</h4>
       <form onSubmit={handleFormSubmit} className="" action="">
         <div className="field-group">
           <div className="field">
