@@ -10,13 +10,11 @@ function CarForm() {
   const dispatch = useDispatch();
   //Handle the name input change
   const handleNameChange = (event) => {
-    console.log(name);
     dispatch(changeName(event.target.value));
   };
 
   //Handle the cost input change
   const handleCostChange = (event) => {
-    console.log(cost);
     dispatch(changeCost(+event.target.value || 0));
   };
 
@@ -24,7 +22,6 @@ function CarForm() {
   const handleFormSubmit = (event) => {
     event.preventDefault();
     dispatch(addCar({ name, cost }));
-    console.log(carsList);
   };
 
   return (
